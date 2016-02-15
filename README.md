@@ -58,4 +58,6 @@ what attacks might be viable. Among other things, vulnerability analysis takes
 into account port and vulnerability scans, data gathered by banner grabbing,
 and information collected during intelligence gathering.
 
+gence gathering and vulnerability analysis are as expert as possible, to give
+you an advantage in adapting to scenarios as they present themselve.s
 
