@@ -1,3 +1,6 @@
+msfencode and msfpayload tool replaced by msfvenom
+
+
 Msfcli is no longer available in Metasploit
 Posted by sinn3r Employee in Metasploit on Jul 10, 2015 11:52:09 AM
 
